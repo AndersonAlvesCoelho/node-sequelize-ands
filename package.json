@@ -1,0 +1,31 @@
+{
+  "name": "maya-energy-api",
+  "version": "1.0.0",
+  "main": "serve.js",
+  "author": "Anderson Alves Coelho",
+  "license": "MIT",
+  "scripts": {
+    "dev": "SET NODE_ENV=development & nodemon src/server.js",
+    "build": "sucrase ./src -d ./dist --transforms imports,jsx,flow",
+    "start": "pm2-runtime ./dist/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^9.0.0",
+    "moment-timezone": "^0.5.34",
+    "npm": "^8.17.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "bcrypt": "^5.1.0",
+    "jwt": "^0.2.0",
+    "nodemon": "^2.0.19",
+    "sequelize-cli": "^6.4.1",
+    "sucrase": "^3.25.0"
+  }
+}
